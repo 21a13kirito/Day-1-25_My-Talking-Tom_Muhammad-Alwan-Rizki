@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student Task Planner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <h1>Student Task Planner</h1>
+      <p id="summary" class="summary"></p>
+    </header>
+
+    <form id="task-form" class="task-form">
+      <input id="title" type="text" placeholder="Judul tugas" required aria-label="Judul tugas">
+      <input id="due" type="date" required aria-label="Tanggal deadline">
+      <button type="submit">Tambah tugas</button>
+    </form>
+
+    <div class="filters" role="group" aria-label="Filter tugas">
+      <button class="filter active" data-filter="all">Semua</button>
+      <button class="filter" data-filter="pending">Belum selesai</button>
+      <button class="filter" data-filter="completed">Selesai</button>
+    </div>
+
+    <ul id="task-list" class="task-list"></ul>
+    <p id="empty" class="empty" hidden>Belum ada tugas di sini. Tambahkan tugas di atas.</p>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+:root {
+  --bg: #f5f7fa;
+  --surface: #ffffff;
+  --ink: #1b2430;
+  --muted: #637083;
+  --line: #dde3ea;
+  --accent: #1f4fd8;
+  --late: #c8322b;
+  --soon: #b9770e;
+  --done: #2f7d4f;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #12161c; --surface: #1b212a; --ink: #e8edf3;
+    --muted: #93a0b2; --line: #2b3441; --accent: #6b95ff;
+    --late: #ff7b72; --soon: #e3a64a; --done: #5ac08a;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font-family: "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+  line-height: 1.5;
+}
+.app { max-width: 640px; margin: 0 auto; padding: 32px 16px 64px; }
+h1 { font-size: 1.75rem; margin: 0 0 4px; }
+.summary { margin: 0 0 24px; color: var(--muted); }
+
+.task-form { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; }
+.task-form input[type="text"] { flex: 1 1 200px; }
+input, button { font: inherit; }
+input {
+  padding: 10px 12px; border: 1px solid var(--line); border-radius: 8px;
+  background: var(--surface); color: var(--ink);
+}
+button {
+  padding: 10px 14px; border: 1px solid var(--line); border-radius: 8px;
+  background: var(--surface); color: var(--ink); cursor: pointer;
+}
+.task-form button { background: var(--accent); border-color: var(--accent); color: #fff; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+
+.filters { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+.filter.active { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+
+.task-list { list-style: none; margin: 0; padding: 0; }
+.task {
+  display: flex; align-items: center; gap: 12px;
+  padding: 14px 12px 14px 16px; margin-bottom: 8px;
+  background: var(--surface); border: 1px solid var(--line);
+  border-left: 5px solid var(--line); border-radius: 8px;
+}
+.task.late { border-left-color: var(--late); }
+.task.soon { border-left-color: var(--soon); }
+.task.completed { border-left-color: var(--done); }
+.task input[type="checkbox"] { width: 20px; height: 20px; accent-color: var(--done); flex: none; }
+.info { flex: 1; min-width: 0; }
+.name { display: block; overflow-wrap: anywhere; }
+.completed .name { text-decoration: line-through; color: var(--muted); }
+.meta { font-size: 0.875rem; color: var(--muted); }
+.late .meta { color: var(--late); font-weight: 600; }
+.soon .meta { color: var(--soon); font-weight: 600; }
+.completed .meta { color: var(--done); }
+.delete { padding: 6px 10px; color: var(--muted); }
+.empty { text-align: center; color: var(--muted); padding: 32px 0; }
