@@ -43,6 +43,4 @@ Alurnya: tulis prompt ke AI untuk membuat web app sederhana → `git init` → c
 - Ed25519 adalah skema tanda tangan kurva eliptik (Curve25519) yang aman dan cepat, cocok untuk SSH key.
 
 ## 3. Pendapat Pribadi tentang Day 1 Proyek Workshop
-> *(Draf, silakan ubah dengan kata-katamu sendiri.)*
-
-Menurut saya, Day 1 ini bermanfaat karena menggabungkan dua hal yang sekarang sangat dibutuhkan: memakai AI dengan benar dan mengelola hasil kerja dengan Git/GitHub. Contoh prompt dengan konteks vs tanpa konteks membuat saya sadar bahwa kualitas hasil AI sangat bergantung pada kualitas instruksi kita. Bagian Git juga terasa relevan untuk bidang keamanan siber, karena riwayat perubahan dan autentikasi SSH adalah praktik dasar yang rapi dan aman. Saran saya, sesi praktik bisa diberi waktu lebih panjang supaya peserta yang baru mengenal terminal tidak tertinggal.
+Menurut saya, Day 1 ini bermanfaat karena menggabungkan dua hal yang sekarang sangat dibutuhkan, memakai AI dengan benar dan mengelola hasil kerja dengan Git/GitHub. Contoh prompt dengan konteks vs tanpa konteks membuat saya sadar bahwa kualitas hasil AI sangat bergantung pada kualitas instruksi kita. Bagian Git juga terasa relevan untuk bidang keamanan siber, karena riwayat perubahan dan autentikasi SSH adalah praktik dasar yang rapi dan aman. Sesi praktiknya juga sudah bagus karena membantu peserta yang baru mengenal terminal.
